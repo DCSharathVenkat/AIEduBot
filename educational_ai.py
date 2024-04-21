@@ -51,7 +51,7 @@ def main():
     print("Greetings! I'm EduBot, you're personal Python teacher!")
     print("Enter a concept or a question in python that you want to learn about today!!!")
     while True:
-        user_query = input("You: ")
+        user_query = input("YOU: ")
         if user_query.lower() == 'quit':
             break
         
@@ -61,8 +61,7 @@ def main():
             difficulty_level = concept_info["difficulty_level"]
             additional_resources = concept_info.get("additional_resources", None)
             
-            print(f"\nHere is the explanation for {user_query}:")
-            print(explanation)
+            print(f"\nEDUBOT: {explanation}:")
             if additional_resources:
                 print(f"\nAdditional Resources: {additional_resources}")
 
