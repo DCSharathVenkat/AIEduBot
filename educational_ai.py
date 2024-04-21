@@ -2,7 +2,6 @@ import nltk
 from nltk.tokenize import word_tokenize
 from fuzzywuzzy import fuzz
 
-# Knowledge base
 knowledge_base = {
   "greet": {
     "question": "hello",
@@ -409,13 +408,6 @@ knowledge_base = {
     "additional_resources": "https://docs.python.org/3/library/asyncio.html"
 },
 
-"data visualization with Matplotlib": {
-    "question": "How to do data visualization with Matplotlib in Python?",
-    "answer": "Matplotlib is a popular data visualization library in Python that allows you to create a wide variety of plots and charts, including line plots, scatter plots, bar plots, histograms, and more. It provides a high-level interface for creating publication-quality visualizations with just a few lines of code. Matplotlib is highly customizable and integrates well with other Python libraries like NumPy and Pandas.",
-    "difficulty_level": "advanced",
-    "additional_resources": "https://matplotlib.org/"
-},
-
 "natural language processing with NLTK": {
     "question": "What is natural language processing (NLP) with NLTK in Python?",
     "answer": "NLTK (Natural Language Toolkit) is a leading platform for building Python programs to work with human language data. It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for tokenization, stemming, tagging, parsing, and classification. NLTK is widely used for tasks like text mining, sentiment analysis, machine translation, and more.",
@@ -461,7 +453,7 @@ knowledge_base = {
     "question": "What are bars",
     "answer": "In data visualization, bars are graphical representations used to display categorical data. Each bar typically represents a category, and the length or height of the bar corresponds to the value associated with that category. Bar charts are commonly used to compare the values of different categories.",
     "difficulty_level": "beginner",
-    "additional_resources": "https://www.data-to-viz.com/caveat/barplot.html"
+    "additional_resources": "https://www.w3schools.com/python/matplotlib_bars.asp"
   },
 
   "histogram": {
@@ -523,9 +515,9 @@ def get_explanation(query):
         return knowledge_base[best_match_concept]  # Return the entire concept dictionary
 
 def main():
-    print("Script started")
+    #print("Script started")
     while True:
-        user_query = input("Enter a question about programming (or 'quit' to exit): ")
+        user_query = input("Enter a concept or a question in python that you want to learn: ")
         if user_query.lower() == 'quit':
             break
         
@@ -535,7 +527,7 @@ def main():
             difficulty_level = concept_info["difficulty_level"]
             additional_resources = concept_info.get("additional_resources", None)
             
-            print(f"\nExplanation for {user_query}:")
+            print(f"\nHere is the explanation for {user_query}:")
             print(explanation)
             if additional_resources:
                 print(f"\nAdditional Resources: {additional_resources}")
