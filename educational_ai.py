@@ -61,7 +61,7 @@ def main():
             difficulty_level = concept_info["difficulty_level"]
             additional_resources = concept_info.get("additional_resources", None)
             
-            print(f"\nEDUBOT: {explanation}:")
+            print(f"\nEDUBOT: {explanation}")
             if additional_resources:
                 print(f"\nAdditional Resources: {additional_resources}")
 
