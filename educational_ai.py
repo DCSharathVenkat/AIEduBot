@@ -8,6 +8,7 @@ knowledge_base = {
     "question": [
         "What are dictionaries in Python?",
         "Define dictionaries",
+        "Explain dictionaries in python."
     ] ,
     "answer": "Dictionaries are unordered collections of key-value pairs. Keys are unique and used to access the corresponding values. Dictionaries are useful for storing and organizing data based on keys.",
     "difficulty_level": "beginner",
