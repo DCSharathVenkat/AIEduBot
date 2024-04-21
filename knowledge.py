@@ -1,31 +1,76 @@
-knowledge_base={
-    "functions": {
-    "question": "What are functions in Python?",
+knowledge_base = {
+  "greet": {
+    "question": "hello",
+    "answer": "Hello! It's nice to meet you. How can I assist you today?",
+    "difficulty_level": "beginner",
+    "additional_resources": "https://www.w3schools.com/python/python_functions.asp"
+  },
+
+  """
+  "greet": {
+    "question": "hi",
+    "answer": "Hi there! I'm happy to help you with any questions or tasks you have."
+  },
+  "greet": {
+    "question": "hey",
+    "answer": "Hey! What brings you here today? I'm here to help with any questions or information you need."
+  },
+  "greet": {
+    "question": "good morning",
+    "answer": "Good morning! I hope you're having a great day so far. How can I assist you today?"
+  },
+  "greet": {
+    "question": "good afternoon",
+    "answer": "Good afternoon! I'm here to help with any questions or tasks you have. How can I assist you today?"
+  },
+  "greet": {
+    "question": "good evening",
+    "answer": "Good evening! I hope you're having a great evening. How can I assist you tonight?"
+  },
+"""
+  
+"functions": {
+"question": [
+"What are functions in Python?",
+"Define functions in python",
+"What is the purpose of functions in Python?",
+"How do you define a function in Python?",
+"What are the benefits of using functions in Python?",
+"How do you pass arguments to a function in Python?",
+"What is the difference between a function and a procedure in Python?"
+],
     "answer": "Functions are reusable blocks of code that perform specific tasks. They can take arguments (inputs) and return values (outputs). Functions help in organizing code and making it more modular.",
     "difficulty_level": "beginner",
     "additional_resources": "https://www.w3schools.com/python/python_functions.asp"
   },
   
-  "Types_Of_functions": {
+  "Types of functions": {
     "question": "What are the different types of functions in Python?",
     "answer": "Python functions come in two flavors: built-in (ready-made) and user-defined (custom made for your program).",
     "difficulty_level": "beginner",
     "additional_resources": "https://www.w3schools.com/python/python_functions.asp"
   },
-"""
-  "lists": {
-    "question": [
-      "What are lists in Python?",
-      "Define lists in Py.",
-    ], 
+
+"lists": {
+"question": [
+"What are lists in Python?",
+"Define lists in python",
+"What is a list data structure in Python?",
+"How do you create a list in Python?",
+"What are the characteristics of lists in Python?"
+],
     "answer": "Lists are ordered collections of items. They can store different data types (like integers, strings, or even other lists) and are mutable (elements can be changed after creation).",
     "difficulty_level": "beginner",
     "additional_resources": "https://www.tutorialspoint.com/python/python_lists.htm"
   },
-  """
 
-  "dictionaries": {
-    "question": "What are dictionaries in Python?",
+"dictionaries": {
+    "question": [
+        "What are dictionaries in Python?",
+        "Define dictionaries",
+        "Explain dictionaries in python."
+    ],
+
     "answer": "Dictionaries are unordered collections of key-value pairs. Keys are unique and used to access the corresponding values. Dictionaries are useful for storing and organizing data based on keys.",
     "difficulty_level": "beginner",
     "additional_resources": "https://www.programiz.com/python/dictionary/"
@@ -359,13 +404,6 @@ knowledge_base={
     "additional_resources": "https://docs.python.org/3/library/asyncio.html"
 },
 
-"data visualization with Matplotlib": {
-    "question": "How to do data visualization with Matplotlib in Python?",
-    "answer": "Matplotlib is a popular data visualization library in Python that allows you to create a wide variety of plots and charts, including line plots, scatter plots, bar plots, histograms, and more. It provides a high-level interface for creating publication-quality visualizations with just a few lines of code. Matplotlib is highly customizable and integrates well with other Python libraries like NumPy and Pandas.",
-    "difficulty_level": "advanced",
-    "additional_resources": "https://matplotlib.org/"
-},
-
 "natural language processing with NLTK": {
     "question": "What is natural language processing (NLP) with NLTK in Python?",
     "answer": "NLTK (Natural Language Toolkit) is a leading platform for building Python programs to work with human language data. It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for tokenization, stemming, tagging, parsing, and classification. NLTK is widely used for tasks like text mining, sentiment analysis, machine translation, and more.",
@@ -373,7 +411,7 @@ knowledge_base={
     "additional_resources": "https://www.nltk.org/"
 },
 
-"SQLAlchemy": {
+"database programming with SQLAlchemy": {
     "question": "How to do database programming with SQLAlchemy in Python?",
     "answer": "SQLAlchemy is a powerful SQL toolkit and Object-Relational Mapping (ORM) library for Python. It provides a full suite of tools for working with databases in Python, including a SQL expression language, an ORM, and a schema migration system. SQLAlchemy allows you to interact with databases using Pythonic objects and expressions, making database programming more intuitive and efficient.",
     "difficulty_level": "advanced",
@@ -408,23 +446,23 @@ knowledge_base={
 },
 
   "bars": {
-    "question": "What are bars in data visualization?",
+    "question": "What are bars",
     "answer": "In data visualization, bars are graphical representations used to display categorical data. Each bar typically represents a category, and the length or height of the bar corresponds to the value associated with that category. Bar charts are commonly used to compare the values of different categories.",
     "difficulty_level": "beginner",
-    "additional_resources": "https://www.data-to-viz.com/caveat/barplot.html"
+    "additional_resources": "https://www.w3schools.com/python/matplotlib_bars.asp"
   },
 
   "histogram": {
-    "question": "What is a histogram in data visualization?",
+    "question": "What is a histogram?",
     "answer": "A histogram is a graphical representation of the distribution of numerical data. It consists of a series of adjacent bars, where each bar represents a range of values (bin) and the height of the bar indicates the frequency of data points falling within that range. Histograms are useful for visualizing the shape, center, and spread of a dataset.",
     "difficulty_level": "intermediate",
     "additional_resources": "https://www.displayr.com/what-is-a-histogram/"
   },
 
   "pie chart": {
-    "question": "What is a pie chart in data visualization?",
+    "question": "What is a pie chart?",
     "answer": "A pie chart is a circular statistical graphic that is divided into slices to illustrate numerical proportions. Each slice represents a proportionate part of the whole, and the size of each slice is proportional to the quantity it represents. Pie charts are useful for showing the relative sizes of categories or percentages in a dataset.",
     "difficulty_level": "beginner",
     "additional_resources": "https://datavizcatalogue.com/methods/pie_chart.html"
-  },
+  }
 }
