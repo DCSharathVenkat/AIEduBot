@@ -517,7 +517,7 @@ def get_explanation(query):
 def main():
     #print("Script started")
     while True:
-        print("Welcome to ChatBot!!!")
+        print("Welcome to Python ChatBot!!!")
         user_query = input("Enter a concept or a question in python that you want to learn: ")
         if user_query.lower() == 'quit':
             break
