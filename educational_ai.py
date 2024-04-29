@@ -45,7 +45,9 @@ def get_explanation(query):
         best_match_concept = max(potential_concepts, key=lambda concept: len(set(preprocessed_query) & set(concept.split())))
         #print("Best match found")
         return k.knowledge_base[best_match_concept]  # Return the entire concept dictionary
-
+    
+    
+    
 def main():
     #print("Script started")
     print("Greetings! I'm EduBot, you're personal Python teacher!")

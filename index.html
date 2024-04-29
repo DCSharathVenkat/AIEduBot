@@ -1,34 +1,62 @@
-knowledge_base = {
-  "greet": {
-    "question": "hello",
-    "answer": "Hello! It's nice to meet you. How can I assist you today?",
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduBot</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+  <p>Was this helpful? 
+    <button id="helpful-button">Helpful</button>
+    <button id="not-helpful-button">Not Helpful</button>
+  </p>
+    <div class="container">
+        <h1>EduBot</h1>
+        <p>Greetings! I'm EduBot, your personal Python teacher!</p>
+        <input type="text" id="user-input" placeholder="Ask me a question...">
+        <button id="submit-button">Ask</button>
+        <p>EDUBOT: <span id="bot-response"></span></p>
+        <p>Click the link for additional resources: <a id="additional-resources" href="#">Link</a></p>
+    </div>
+    <script>
+        const userInput = document.getElementById('user-input');
+        const submitButton = document.getElementById('submit-button');
+        const botResponse = document.getElementById('bot-response');
+        const additionalResources = document.getElementById('additional-resources');
+
+    const knowledgeBase = {
+  "python-definition": {
+    "question": "What is Python?",
+    "answer": "Python is a high-level, interpreted programming language.",
     "difficulty_level": "beginner",
-    "additional_resources": "https://www.w3schools.com/python/python_functions.asp"
+    "additional_resources": "(link unavailable)"
   },
-  
-"functions": {
-"question": [
-"What are functions in Python?",
-"Define functions in python",
-"What is the purpose of functions in Python?",
-"How do you define a function in Python?",
-"What are the benefits of using functions in Python?",
-"How do you pass arguments to a function in Python?",
-"What is the difference between a function and a procedure in Python?"
-],
+  "python-functions": {
+    "question": [
+    "What are functions?",
+    "Define functions in python",
+    "What is the purpose of functions in Python?",
+    "How do you define a function in Python?",
+    "What are the benefits of using functions in Python?",
+    "How do you pass arguments to a function in Python?",
+    "What is the difference between a function and a procedure in Python?"
+    ],
     "answer": "Functions are reusable blocks of code that perform specific tasks. They can take arguments (inputs) and return values (outputs). Functions help in organizing code and making it more modular.",
     "difficulty_level": "beginner",
-    "additional_resources": "https://www.w3schools.com/python/python_functions.asp"
+    "additional_resources": "https://www.w3schools.com/python/python_functions.asp#:~:text=A%20function%20is%20a%20block,as%20parameters%2C%20into%20a%20function."
   },
-  
-  "Types of functions": {
-    "question": "What are the different types of functions in Python?",
-    "answer": "Python functions come in two flavors: built-in (ready-made) and user-defined (custom made for your program).",
-    "difficulty_level": "beginner",
-    "additional_resources": "https://www.w3schools.com/python/python_functions.asp"
-  },
-
-"lists": {
+  "lists": {
 "question": [
 "What are lists in Python?",
 "Define lists in python",
@@ -40,12 +68,11 @@ knowledge_base = {
     "difficulty_level": "beginner",
     "additional_resources": "https://www.tutorialspoint.com/python/python_lists.htm"
   },
-
-"dictionaries": {
+  "dictionaries": {
     "question": [
-        "What are dictionaries in Python?",
-        "Define dictionaries",
-        "Explain dictionaries in python."
+    "What are dictionaries in Python?",
+    "Define dictionaries",        
+    "Explain dictionaries in python."
     ],
 
     "answer": "Dictionaries are unordered collections of key-value pairs. Keys are unique and used to access the corresponding values. Dictionaries are useful for storing and organizing data based on keys.",
@@ -430,7 +457,7 @@ knowledge_base = {
   },
 
   "histogram": {
-    "question": "What is a histogram?",
+   "question": "What is a histogram?",
     "answer": "A histogram is a graphical representation of the distribution of numerical data. It consists of a series of adjacent bars, where each bar represents a range of values (bin) and the height of the bar indicates the frequency of data points falling within that range. Histograms are useful for visualizing the shape, center, and spread of a dataset.",
     "difficulty_level": "intermediate",
     "additional_resources": "https://www.displayr.com/what-is-a-histogram/"
@@ -442,4 +469,49 @@ knowledge_base = {
     "difficulty_level": "beginner",
     "additional_resources": "https://datavizcatalogue.com/methods/pie_chart.html"
   }
-}
+};
+
+submitButton.addEventListener('click', () => {
+  const userQuery = userInput.value.trim();
+  if (userQuery) {
+    let foundAnswer = null;
+    Object.keys(knowledgeBase).forEach((concept) => {
+      const question = knowledgeBase[concept].question;
+      if (Array.isArray(question)) {
+        if (question.includes(userQuery)) {
+          foundAnswer = knowledgeBase[concept];
+        }
+      } else if (question === userQuery) {
+        foundAnswer = knowledgeBase[concept];
+      }
+    });
+    if (foundAnswer) {
+      botResponse.innerText = foundAnswer.answer;
+      additionalResources.href = foundAnswer.additional_resources;
+    } else {
+      botResponse.innerText = 'Concept not found in the knowledge base.';
+    }
+  }
+  
+});
+const helpfulButton = document.getElementById('helpful-button');
+const notHelpfulButton = document.getElementById('not-helpful-button');
+
+helpfulButton.addEventListener('click', () => {
+  // Get the current feedback count from localStorage
+  let helpfulCount = localStorage.getItem('helpfulCount') || 0;
+  helpfulCount++;
+  localStorage.setItem('helpfulCount', helpfulCount);
+  console.log('User found the response helpful!');
+});
+
+notHelpfulButton.addEventListener('click', () => {
+  // Get the current feedback count from localStorage
+  let notHelpfulCount = localStorage.getItem('notHelpfulCount') || 0;
+  notHelpfulCount++;
+  localStorage.setItem('notHelpfulCount', notHelpfulCount);
+  console.log('User did not find the response helpful!');
+});
+    </script>
+</body>
+</html>
