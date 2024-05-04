@@ -69,21 +69,25 @@ knowledge_base = {
 
 
   "operators": {
-    "question": "What are operators in Python?",
+    "question": ["What are operators in Python?"
+                 "How to use operators in python?"],
     "answer": "Operators are special symbols that perform operations on values. Python has various operators like arithmetic operators (+, -, *, /), comparison operators (==, !=, <, >), and logical operators (and, or, not).",
     "difficulty_level": "beginner",
     "additional_resources": "https://www.guru99.com/python-operators.htm"
   },
 
   "modules": {
-    "question": "What are modules in Python?",
+    "question": ["What are modules in Python?"
+                 "Explain Python modules."
+                 "Provide an overview of Python modules."],
     "answer": "Modules are reusable Python code files. They contain functions, classes, and variables that can be imported and used in other Python scripts. Modules help in code organization and reusability.",
     "difficulty_level": "intermediate",
     "additional_resources": "https://www.datacamp.com/tutorial/modules-in-python"
   },
 
   "classes": {
-    "question": "What are classes in Python?",
+    "question": ["What are classes in Python?"
+                 "Explain classes in python."],
     "answer": "Classes are blueprints for creating objects. They define properties (attributes) and functionalities (methods) that objects of that class will inherit. Classes are fundamental for object-oriented programming in Python.",
     "difficulty_level": "intermediate",
     "additional_resources": "https://www.tutorialspoint.com/python/python_classes.htm"
@@ -93,7 +97,7 @@ knowledge_base = {
     "question": "How to get user input and print output in Python?",
     "answer": "Python provides functions to get user input (using the 'input' function) and display output (using the 'print' function). These functions are essential for interacting with users in your programs.",
     "difficulty_level": "beginner",
-    "additional_resources": "Link",
+    "additional_resources": "https://realpython.com/python-input-output/#:~:text=Take%20user%20input%20from%20the,data%20using%20Python%20f%2Dstrings",
 },
 
 "tuples": {
@@ -160,7 +164,7 @@ knowledge_base = {
 },
 
 "OOP": {
-    "question": "What is object-oriented programming (OOP) in Python?",
+    "question": "What is object-oriented programming OOP in Python?",
     "answer": "Object-oriented programming (OOP) is a programming paradigm that uses objects and classes to organize code. In Python, everything is an object, and you can create your own custom objects by defining classes. OOP concepts include encapsulation, inheritance, and polymorphism.",
     "difficulty_level": "intermediate",
     "additional_resources": "https://realpython.com/python3-object-oriented-programming/"
