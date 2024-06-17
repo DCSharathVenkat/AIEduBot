@@ -63,10 +63,6 @@ Example Questions
 What are modules in Python?
 Explain Python classes.
 Describe Python functions.
-Screenshots
-
-License
-This project is licensed under the MIT License. See the LICENSE file for more details.
 
 Contributing
 Fork the repository.
